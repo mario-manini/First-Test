@@ -3,16 +3,15 @@
 #include <string.h>
 
 // Define an appropriate struct
-typedef struct {
+typedef struct FITNESS_DATA{
 	char date[11];
 	char time[6];
 	int steps;
-} FITNESS_DATA;
+};
+
+
 
 // Define any additional variables here
-
-
-
 // This is your helper function. Do not change it in any way.
 // Inputs: character array representing a row; the delimiter character
 // Ouputs: date character array; time character array; steps character array
@@ -43,6 +42,47 @@ void tokeniseRecord(const char *input, const char *delimiter,
 
 // Complete the main function
 int main() {
+
+    int MAXCHAR = 1000;
+    //int fitnessdataarray[10000] = {};
+    FILE *FitnessData;
+    char row[MAXCHAR];
+    int count = 0;
+    FitnessData = fopen("FitnessData_2023.csv","r");
+
+    while (feof(FitnessData) != 1)
+    {
+        count += 1;
+        fgets(row, MAXCHAR, FitnessData);
+        printf("Row: %s\n", row);
+
+        char * token = strtok(row, ",");
+        char* date;
+        char* time;
+        char* steps;
+
+        date = token;
+        printf(" here: %s\n",date);
+        token = strtok(NULL, ",");
+        time = token;
+        printf( " here: %s\n", time);
+        token = strtok(NULL, ",");
+        steps = token;
+        printf( " here: %s\n", steps);
+        
+        
+        
+
+    }
+    
+    
+
+    printf("\nNumber of records in file: %d\n", count);
+    return 0;
+
+    //assign each line to struct
+
+
 
 
 }

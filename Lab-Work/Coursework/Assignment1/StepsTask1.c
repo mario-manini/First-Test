@@ -75,7 +75,7 @@ int main()
         count += 1;
     }
 
-    printf("\nNumber of records in file: %d\n", count);
+    printf("Number of records in file: %d\n", count);
 
     int i;
     for (i = 0; i < 3; i++)

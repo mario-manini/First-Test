@@ -75,12 +75,15 @@ int main()
         count += 1;
     }
 
-    printf("Number of records in file: %d", count);
+    printf("Number of records in file: %d\n", count);
 
     int i;
     for (i = 0; i < 3; i++)
     {
-        printf("%s/%s/%d", data[i].date, data[i].time, data[i].steps);
+        if (i < count){
+            printf("%s/%s/%d\n", data[i].date, data[i].time, data[i].steps);
+        }
+
     }
 
     return 0;

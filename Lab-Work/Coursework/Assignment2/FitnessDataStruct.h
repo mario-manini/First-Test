@@ -1,9 +1,11 @@
 #ifndef FITNESS_DATA_STRUCT_H
 #define FITNESS_DATA_STRUCT_H
 
-#include <stdlib.h>
+
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <stdbool.h>
 
 // Define an appropriate struct
 typedef struct {

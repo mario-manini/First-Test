@@ -2,10 +2,12 @@
 #include <stdlib.h>
 #include "utils.h"
 
-int main() {
-    char* filename = "data.txt";
+int main()
+{
+    char *filename = "data.txt";
     FILE *file = fopen(filename, "r");
-    if (file == NULL) {
+    if (file == NULL)
+    {
         printf("Error opening file\n");
         return 1;
     }
@@ -13,7 +15,8 @@ int main() {
     int buffer_size = 100;
     char line_buffer[buffer_size];
 
-    while (fgets(line_buffer, buffer_size, file) != NULL) {
+    while (fgets(line_buffer, buffer_size, file) != NULL)
+    {
         printf("%d\n", atoi(line_buffer));
     }
 

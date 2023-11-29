@@ -48,6 +48,7 @@ int main()
         scanf(" %c", &choice);
         if (strcmp(&choice, strQ) == 0 || strcmp(&choice, strQ) == totalrecords)
                {
+            return 0;
             break;
         }
 

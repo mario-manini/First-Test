@@ -46,12 +46,6 @@ int main()
         printf("    F: Find the longest continuous period where the step count is above 500 steps.\n");
         printf("    Q: Exit.\n");
         scanf(" %c", &choice);
-        if (strcmp(&choice, strQ) == 0 || strcmp(&choice, strQ) == totalrecords)
-               {
-            return 0;
-            break;
-        }
-
         switch (choice)
         {
         case 'A':
@@ -166,6 +160,10 @@ int main()
             
             break;
 
+
+        case 'Q':
+            return 0;
+            
         default:
 
         printf("Invalid input: Try again\n");
@@ -174,3 +172,11 @@ int main()
         }
     }
 }
+
+/*
+        if (strcmp(&choice, strQ) == 0 || strcmp(&choice, strQ) == totalrecords)
+               {
+            return 0;
+            break;
+        }
+*/

@@ -73,9 +73,8 @@ int main()
         const char *lastdatechar = &date[datelength-1];
 
         if ((strcmp(steps,"\n") == 0) || (strcmp(lasttimechar,"\n") == 0) || (strcmp(lastdatechar,"\n") == 0)){
-            printf("Error: invald file");
+            printf("Error: invalid file\n");
             return 1;
-            break;
         }
         count += 1;
     }

@@ -74,6 +74,7 @@ int main()
 
         if ((strcmp(steps,"\n") == 0) || (strcmp(lasttimechar,"\n") == 0) || (strcmp(lastdatechar,"\n") == 0)){
             printf("Error: invald file");
+            return 1;
             break;
         }
         count += 1;
